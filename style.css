@@ -1,0 +1,54 @@
+html, body {
+  
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+.imagenInicio {
+  width: 100%;
+  height: 100vh;
+  
+}
+
+.botonInicio{
+  background-color:aqua ;
+  border:none;
+  padding: 20px;
+  position:absolute;
+  width: 100px;
+  height: 50px;
+  left:calc(50% - 50px);
+  top: calc(50% - 25px);
+}
+
+.Recuadros{
+  width: 240px;
+  height: 200px;
+}
+
+#contenedorRecuadros{
+  position:absolute;
+  left: 0;
+  top: calc(50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
+
+#recuadroPlaylist{
+  position:absolute;
+  width: 240px;
+  height: 200px;
+  left: 18%;
+  top: 120px;
+}
+
+
+.botonInicio:hover{
+  cursor: pointer;
+}
