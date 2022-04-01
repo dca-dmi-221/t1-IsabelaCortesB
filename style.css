@@ -55,7 +55,7 @@ canvas {
 .botonRegresar{
   font-size: 250;
   background-color:rgb(0, 173, 204) ;
-  box-shadow: 0 8px 16px 0 rgba(9, 70, 128, 0.2), 0 6px 20px 0 rgba(9, 70, 128, 0.2);
+  box-shadow: 0 8px 16px 0 rgba(4, 27, 49, 0.2), 0 6px 20px 0 rgba(9, 70, 128, 0.2);
   border:none;
   border-radius: 8px;
   padding: 20px;
