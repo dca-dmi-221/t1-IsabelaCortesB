@@ -11,6 +11,10 @@ function setup() {
   
   botonInicio.mousePressed(botonInicioPressed)
 
+  var botonRegresar = select("#botonRegresar");
+  
+  botonRegresar.mousePressed(botonRegresarPressed)
+
   var botonesPlaylists = selectAll(".Recuadros");
 
   for (var i=0; i < botonesPlaylists.length; i++){
@@ -29,6 +33,7 @@ console.log(this);
 var recuadroPlaylist = select("#recuadroPlaylist")
 recuadroPlaylist.attribute("src",this.attribute("src"))
 
+
 }
 
 
@@ -39,5 +44,12 @@ function draw() {
 function botonInicioPressed(){
   pantalla1.hide();
   pantalla2.show();
+ 
+}
+
+function botonRegresarPressed(){
+  pantalla1.hide();
+  pantalla2.show();
+  pantalla3.hide();
  
 }

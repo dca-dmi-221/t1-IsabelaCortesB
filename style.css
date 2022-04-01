@@ -15,10 +15,12 @@ canvas {
 }
 
 .botonInicio{
-  background-color:aqua ;
+  background-color:rgb(129, 199, 241) ;
   border:none;
   padding: 20px;
   position:absolute;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgba(2, 32, 57, 0.2), 0 6px 20px 0 rgba(20, 134, 240, 0.2);
   width: 100px;
   height: 50px;
   left:calc(50% - 50px);
@@ -26,7 +28,7 @@ canvas {
 }
 
 .Recuadros{
-  width: 240px;
+  width: 270px;
   height: 200px;
 }
 
@@ -42,13 +44,38 @@ canvas {
 
 #recuadroPlaylist{
   position:absolute;
-  width: 240px;
+  width: 270px;
   height: 200px;
   left: 18%;
   top: 120px;
 }
 
 
+
+.botonRegresar{
+  font-size: 250;
+  background-color:rgb(0, 173, 204) ;
+  box-shadow: 0 8px 16px 0 rgba(9, 70, 128, 0.2), 0 6px 20px 0 rgba(9, 70, 128, 0.2);
+  border:none;
+  border-radius: 8px;
+  padding: 20px;
+  position:absolute;
+  width: 100px;
+  height: 50px;
+  left: 5%;
+  top: 20px;
+}
+
+.botonRegresar:hover{
+  background-color: rgb(6, 85, 122);
+  color: white;
+  cursor: pointer;
+}
+
+
+
 .botonInicio:hover{
+  background-color: rgb(199, 230, 255);
+  color: white;
   cursor: pointer;
 }
