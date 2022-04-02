@@ -17,15 +17,15 @@
 
     <div id="Pantalla1">
       <img class="imagenInicio" src="Pantalla 1.jpg"/>
-      <button id="botonInicio" class="botonInicio">Inicio</button>
+      <button id="botonInicio" class="botonInicio">Start</button>
     </div>
 
     <div id="Pantalla2" hidden>
       <img class="imagenInicio" src="Pantalla 2.jpg"/>
       <div id="contenedorRecuadros"> 
-        <img class="Recuadros" src="Recuadro12.png"/> 
-        <img class="Recuadros" src="Recuadro13.png"/> 
-        <img class="Recuadros" src="Recuadro14.png"/> 
+        <img class="Recuadros" src="Recuadro12.png" id="playlistA"/> 
+        <img class="Recuadros" src="Recuadro13.png" id="playlistElsa"/> 
+        <img class="Recuadros" src="Recuadro14.png" id="playlistOlaf"/> 
       
       </div>
 
@@ -34,16 +34,20 @@
     <div id="Pantalla3" hidden>
       <img class="imagenInicio" src="Pantalla3.jpg"/>
       <img id="recuadroPlaylist"/>
-      <button id="botonRegresar" class="botonRegresar"> back </button>
+      <button id="botonRegresar" class="botonRegresar">Back</button>
+      
+      <div id="contenedorBotones"></div>
   
-    </div>
+      <audio width="300px" height="300px" controls id="audio">
+        <source  id="audiosrc" src=""/>
+      </audio>
 
+
+    </div>
 
     
 
-    <!--audio width="300px" height="300px" controls>
-      <source src="LetItGo.mp3"/>
-    </-audio-->
+    
     
   </body>
 </html>
