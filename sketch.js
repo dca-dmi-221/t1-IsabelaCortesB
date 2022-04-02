@@ -4,12 +4,23 @@ var pantalla3
 var contenedorBotones
 var audiosrc
 var audio
+var nombreCancion
+var cancionInput
 
 var playlists = {
-  playlistA: ["Nieve.mp3", "LaPuertaEsElAmor.mp3"],
-  playlistElsa: ["LetItGo.mp3", "MuchoMásAllá.mp3", "Sueltalo.mp3"],
-  playlistOlaf: ["Muéstrate.mp3", "ShowYourself.mp3"]
+  playlistA: {
+    audios:["Nieve.mp3", "LaPuertaEsElAmor.mp3"], 
+    backgroundColor: "#A92883"
+  },
+  playlistElsa: {
+    audios:["LetItGo.mp3", "MuchoMásAllá.mp3", "Sueltalo.mp3"],
+    backgroundColor: "#022039"
+  },
+  playlistOlaf: {
+    audios:["Muéstrate.mp3", "ShowYourself.mp3"],
+    backgroundColor: "#3A3D3F"
 
+  }
 
 }
 
@@ -20,10 +31,11 @@ function setup() {
    contenedorBotones = select("#contenedorBotones");
    audiosrc = select("#audiosrc");
    audio = select("#audio");
-
+   nombreCancion = select("#nombreCancion");
+  cancionInput = select("#file-input");
+  cancionInput.changed(handleFile);
   
   var botonInicio = select("#botonInicio");
-  var fileinput = createFileInput(handleFile);
   botonInicio.mousePressed(botonInicioPressed)
 
   var botonRegresar = select("#botonRegresar");
@@ -59,22 +71,26 @@ for (var i=0; i < botones.length; i++){
 }
 
 var playlistName = this.attribute("id")
-var audios = playlists[playlistName]
+var audios = playlists[playlistName].audios
+var backgroundColor = playlists[playlistName].backgroundColor
 
 for (var i=0; i < audios.length; i++){
   var audio = audios[i] 
-  crearAudioButton(audio, playlistName);
+  crearAudioButton(audio, playlistName, backgroundColor);
  
 }
 
 }
 
 
-function crearAudioButton(audioName, playlistName) {
+function crearAudioButton(audioName, playlistName, backgroundColor) {
   var audioButton = createButton(audioName)
   audioButton.attribute("id","audioButton")
+  audioButton.style("background-color", backgroundColor)
   audioButton.mousePressed(()=>{
+    nombreCancion.html (audioName)
   audio.stop();
+    audiosrc.attribute("src","")
     audiosrc.attribute("src",playlistName+"/" +audioName)
     audio.play();
   })
@@ -83,11 +99,15 @@ function crearAudioButton(audioName, playlistName) {
 
 }
 
-function handleFile(file){
-
-console.log(file);
+function handleFile(event){
+  console.log(event.target.files[0])
+  nombreCancion.html (event.target.files[0].name)
+  var fileurl = URL.createObjectURL(event.target.files[0])
+  audio.stop();
+  audiosrc.attribute("src", "")
+  audiosrc.attribute("src", fileurl)
+  audio.play();
 }
-
 
 function draw() {
  
