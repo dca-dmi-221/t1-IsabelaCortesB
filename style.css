@@ -15,6 +15,8 @@ canvas {
 }
 
 .botonInicio{
+  font-size: 550;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   background-color:rgb(129, 199, 241) ;
   border:none;
   padding: 20px;
@@ -51,10 +53,14 @@ canvas {
   top: 120px;
 }
 
+.Recuadros:hover{
+  cursor: pointer;
+}
 
 
 .botonRegresar{
-  font-size: 250;
+  font-size: 550;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   background-color:rgb(21, 149, 189) ;
   box-shadow: 0 8px 16px 0 rgba(4, 27, 49, 0.2), 0 6px 20px 0 rgba(9, 70, 128, 0.2);
   border:none;
@@ -123,14 +129,28 @@ canvas {
 }
 
 #cargarCancion{
-  font-size: 250;
+  font-size: small;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   background-color:rgb(21, 149, 189) ;
   box-shadow: 0 8px 16px 0 rgba(4, 27, 49, 0.2), 0 6px 20px 0 rgba(9, 70, 128, 0.2);
   border:none;
   border-radius: 8px;
   padding: 20px;
   position:absolute;
-  width: 100px;
+  width: 80px;
   right: 45%;
   top: 20px;
+  
+}
+
+#cargarCancion:hover{
+  background-color: rgb(2, 0, 71);
+  color: white;
+  cursor: pointer;
+}
+
+#audioButton:hover{
+  background-color: rgb(199, 230, 255);
+  color: white;
+  cursor: pointer;
 }

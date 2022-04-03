@@ -10,7 +10,7 @@ var cancionInput
 var playlists = {
   playlistA: {
     audios:["Nieve.mp3", "LaPuertaEsElAmor.mp3"], 
-    backgroundColor: "#A92883"
+    backgroundColor: "#3F2D5A"
   },
   playlistElsa: {
     audios:["LetItGo.mp3", "MuchoMásAllá.mp3", "Sueltalo.mp3"],
