@@ -121,8 +121,8 @@ canvas {
   position: absolute;
   min-width: 350px;
   min-height: 100px;
-  right: 5%;
-  top: 400px;
+  right: 8%;
+  top: 500px;
   display: flex;
   align-items: center;
   flex-direction: column;
